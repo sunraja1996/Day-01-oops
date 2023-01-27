@@ -1,0 +1,214 @@
+//Part 1: Find the culprits and nail them — debugging javascript
+
+//                         Find the culprit
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert( "I'm JavaScript!");
+ </script>
+</body>
+</html>
+
+
+//                    Find the culprit and invoke the alert
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// in script.js
+alert("I'm invoked!");
+
+//                    Fix the below to alert Guvi geek
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+//in script.js
+
+let admin=9, fname=10.5; 
+fname = "Guvi";
+let lname = "geek"
+admin = fname+lname;
+alert( admin ); // "Guvi geek"
+
+//                   Fix the below to alert hello Guvi geek
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// in script.js
+let fname=10.5; 
+fname = "Guvi";
+let lname = "geek"
+let name = fname+lname;
+alert( `hello ${name}` );
+
+//                      Fix the below to alert sum of two numbers
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+//in script.js
+
+let a = Number(prompt("First number?"));
+let b = Number(prompt("Second number?"));
+alert(a + b);
+
+//                        If you run the below scritpt you will get “Code is Blasted”
+
+//                   Explain Why the Code is blasted and how to diffuse it and get “Diffused”.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// in script.js
+var a = "2" < "12";
+
+if (a) {
+  console.log("Code is Diffused")
+}
+else
+{
+  console.log("Blasted") 
+}
+
+The reason the original code "blasted" is because when we use the greater than operator (">") on strings, JavaScript compares them based on their Unicode values. In this case, the Unicode value of "2" is greater than the Unicode value of "1", so the expression "2" > "12" evaluates to true.
+
+To "diffuse" the code, we need to change the comparison operator from ">" to "<" which will make the if block execute and the output will be "Code is Diffused"
+
+//                       How to get the success in console.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// in script.js
+let a = prompt("Enter a number?");
+if(a === ""){
+ console.log( "Success" );
+}
+else {
+ console.log( 'OMG it works for any number inc 0' );
+}
+
+
+//                        How to get the correct score in console.
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// in script.js
+let value = prompt('How many runs you scored in this ball');
+if (value == 4) {
+      console.log("You hit a Four");
+} else if (value == 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+
+//                           Fix the code to welcome the Employee
+// in script.js
+let login = 'Employee';
+let message = (login == 'Employee') ? 'Welcome' :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
+
+
+//                           Fix the code to welcome the boss
+// in script.js
+let role = 'boss';
+let message;
+if (role === 'boss') {
+  message = "Welcome boss";
+} else {
+  message = "Go away";
+}
+console.log(message);
+
+
+//                           Change the code to print 3 2 1
+// in script.js
+let i = 3;
+while (i) {
+console.log(i--);
+}
+
+//                           Change the code to print 1 to 10 in 4 lines
+// in script.js
+let num = 1;
+for (let i = 0; i < 10; i++) {
+console.log(num);
+num++;
+}
+
+
+//                           Change the code to print even numbers
+// in script.js
+for (let num = 2; num <= 20; num += 2) {
+console.log(num)
+}
+
+//                           Change the code to print all the gifts
+// in script.js
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < gifts.length; i++) {
+console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+
+//                          Fix the code to disarm the bomb.
+// in script.js
+let countdown = 100;
+while (countdown > 0) {
+  countdown--;
+}
+if(countdown == 0)
+{
+ console.log("bomb disarmed");
+}
+
+
+//                          Whats the msg printed and why?
+// in script.js
+The message printed would be "hi" because the variable lemein is a string with a value of "0", which is considered a truthy value in JavaScript. Even though the string value is "0", it is still a non-empty string, so the first if statement evaluates to true and "hi" is added to the msg variable. The second if statement with the variable lemeout is 0 which is a falsy value, so the statement evaluates to false and "Hello" is not added to the msg variable.
+
+
+
+
+
+
+
+
+
